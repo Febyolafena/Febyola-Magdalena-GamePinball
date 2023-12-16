@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 
@@ -20,6 +21,10 @@ public class Switch : MonoBehaviour
     public Collider bola;
     public Material offMaterial;
     public Material onMaterial;
+    
+    public AudiooManager audioManager;
+
+    public VFXManager VFXManager;
 
     // menggantikan isOn
     private SwitchState state;
@@ -42,6 +47,12 @@ public class Switch : MonoBehaviour
         if (other == bola)
         {
             Toggle();
+            
+            var playPos = other.transform.position;
+            
+            audioManager.PlaySFX(playPos);
+
+            VFXManager.PlayVFX(playPos);
         }
     }
 

@@ -4,6 +4,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class Switch : MonoBehaviour
 {
     // enum untuk menatur state

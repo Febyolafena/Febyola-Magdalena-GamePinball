@@ -17,4 +17,5 @@ public class TriggerGameOver : MonoBehaviour
             gameOverCanvas.SetActive(true);
         }
     }
+
 }

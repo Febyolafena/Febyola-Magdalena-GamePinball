@@ -1529,7 +1529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playButton: {fileID: 554167842}
   exitButton: {fileID: 1036167548}
-  creaditButton: {fileID: 0}
+  creaditButton: {fileID: 1264694603}
 --- !u!114 &2127474927
 MonoBehaviour:
   m_ObjectHideFlags: 0

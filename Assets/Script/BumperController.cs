@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class BumperController : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class BumperController : MonoBehaviour
     public AudiooManager audiooManager;
 
     public VFXManager VFXManager;
+
+    public ScoreManager scoreManager;
+
+    public float score;
 
     private void Start()
     {
@@ -35,6 +40,8 @@ public class BumperController : MonoBehaviour
             audiooManager.PlaySFX(collision.transform.position);
 
             VFXManager.PlayVFX(collision.transform.position);
+
+            scoreManager.AddScore(10);
         }
     }
 }

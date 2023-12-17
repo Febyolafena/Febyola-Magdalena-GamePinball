@@ -32,6 +32,10 @@ public class Switch : MonoBehaviour
     // Renderer object 
     private Renderer renderer;
 
+    public ScoreManager scoreManager;
+
+    public float score;
+
 
     private void Start()
     {
@@ -74,6 +78,8 @@ public class Switch : MonoBehaviour
 
     private void Toggle()
     {
+        scoreManager.AddScore(10);
+
         if (state == SwitchState.On)
         {
             Set(false);
